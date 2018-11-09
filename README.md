@@ -40,7 +40,17 @@ How to create angular library using ng-packagr
 
 <code> "packagr": "ng-packagr -p ng-package.json" </code>
 
-10. Now run <code> npm run packagr </code>
+10. Remove ng-packagr from dependencies and change dependencies to "peerDependencies".
+
+11. Now run <code> npm run packagr </code>
+
+12. You can see the code is packaged in dist folder.
+
+13. Change directory to dist and run <code> npm pack </code>
+
+14. We can get a tar file.
+
+
 
 
 
