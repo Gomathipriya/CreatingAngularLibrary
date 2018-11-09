@@ -19,11 +19,28 @@ How to create angular library using ng-packagr
   
 6. Create public_api.ts file. Export all the modules and components to be used as library
 
-   <pre> Example
-    
+<pre> Example  
     export { moduleName } from './src/app/moduleName.module';
     export { componentName } from './src/app/componentName.component';
+</pre>
 
- </pre>
+7. Create ng-package.json like below
+<pre>
+{
+  "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
+  "lib": {
+    "entryFile": "public_api.ts"
+  }
+}
+</pre>
 
-7. Create 
+8. Remove target and module from tsconfig.json file and   change "typescript": "2.9.2" in package.json
+
+9. In package.json make private as true, update the version and add the below script 
+
+<code> "packagr": "ng-packagr -p ng-package.json" </code>
+
+10. Now run <code> npm run packagr </code>
+
+
+
