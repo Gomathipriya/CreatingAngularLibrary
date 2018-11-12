@@ -51,6 +51,8 @@ How to create angular library using ng-packagr
 14. We can get a tar file.
 
 
-
+<pre>
+Note: Have all the HTML code and CSS code inside typescript
+</pre>
 
 
